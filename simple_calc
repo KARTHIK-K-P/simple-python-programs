@@ -1,3 +1,4 @@
+#one type
 def action():
    A = int(input("enter the number:"))
    value = input("Enter an operation:(+,-,*,/) ")
@@ -16,3 +17,40 @@ def action():
 
 result = action()
 print(result)
+
+#2nd type
+def action():
+    A = int(input("Enter the first number: "))
+    B = int(input("Enter the second number: "))
+    return A, B
+
+choices = {
+    1: "add",
+    2: "sub",
+    3: "mul",
+    4: "div"
+}
+
+print("Choose an operation:")
+for key, value in choices.items():
+    print(f"{key}. {value}")
+
+choose = int(input("Enter the operation number: "))
+
+A, B = action()
+
+if choose == 1:
+    result = A + B
+elif choose == 2:
+    result = A - B
+elif choose == 3:
+    result = A * B
+elif choose == 4:
+    if B != 0:
+        result = A / B
+    else:
+        result = "Division by zero is not allowed"
+else:
+    result = "Invalid choice"
+
+print("Result:", result)
