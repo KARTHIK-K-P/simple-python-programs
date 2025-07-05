@@ -1,0 +1,41 @@
+def main():
+  print("Welcome to the KBC game!")
+
+  # Question 1
+  print("\nQuestion 1:")
+  print("What is the capital of India?")
+  print("1. Mumbai")  
+  print("2. Delhi")
+  print("3. Kolkata")
+  print("4. Chennai")
+  answer1 = input("Enter the number of your answer (1-4): ")
+
+  # Question 2
+  print("\nQuestion 2:")
+  print("Who is the Prime Minister of India?")
+  print("1. Narendra Modi")
+  print("2. Rahul Gandhi")
+  print("3. Amit Shah")
+  print("4. Yogi Adityanath")
+  answer2 = input("Enter the number of your answer (1-4): ")
+
+  # Return answers for evaluation
+  return answer1, answer2
+
+# Call the function and get answers
+user_answers = main()
+
+# Correct answers
+correct_answers = ['2', '1']
+reward_per_question = 1000
+total_reward = 0
+
+# Evaluate answers
+for i in range(2):
+  if user_answers[i] == correct_answers[i]:
+      print(f"Question {i+1}: Correct! You win ₹{reward_per_question}")
+      total_reward += reward_per_question
+  else:
+      print(f"Question {i+1}: Wrong answer!")
+
+print(f"\nTotal reward: ₹{total_reward}")
