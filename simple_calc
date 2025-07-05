@@ -1,0 +1,18 @@
+def action():
+   A = int(input("enter the number:"))
+   value = input("Enter an operation:(+,-,*,/) ")
+   B = int(input("enter the number:"))
+   
+   if value == "+":
+      return A + B
+   elif value == "-":
+      return A - B
+   elif value == "*":
+      return A * B
+   elif value == "/":
+      return A / B
+   else:
+      return "invalid operation"
+
+result = action()
+print(result)
